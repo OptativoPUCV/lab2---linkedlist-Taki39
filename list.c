@@ -97,7 +97,7 @@ void pushBack(List * list, void * data)
       }
     puntero->next = n;
   }
-  list->tail = n;
+  
   //list->current = list->tail;
   pushCurrent(list,data);
 }
