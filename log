@@ -267,3 +267,16 @@ list.h:20:25: note: expected ‘List *’ {aka ‘struct List *’} but argument
 cc1: all warnings being treated as errors
 Compilation failed
 bbab6ec
+Fri 24 Mar 2023 11:55:46 AM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘pushBack’:
+list.c:75:9: error: ‘data’ redeclared as different kind of symbol
+   75 |   Node* data = createNode(data);
+      |         ^~~~
+list.c:73:35: note: previous definition of ‘data’ with type ‘void *’
+   73 | void pushBack(List * list, void * data)
+      |                            ~~~~~~~^~~~
+Compilation failed
+31542aa
