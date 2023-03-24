@@ -291,3 +291,9 @@ list.c:75:9: error: unused variable ‘n’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 503776b
+Fri 24 Mar 2023 11:56:11 AM UTC: 
+ list.c | 1 -
+ 1 file changed, 1 deletion(-)
+ tests:  2|5
+total_score: 15/70
+53b7e34
