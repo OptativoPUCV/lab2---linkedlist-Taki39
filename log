@@ -226,3 +226,14 @@ list.c:88:30: error: expected ‘;’ before ‘}’ token
 cc1: all warnings being treated as errors
 Compilation failed
 1861197
+Fri 24 Mar 2023 11:55:20 AM UTC: 
+ list.c | 4 ----
+ 1 file changed, 4 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘pushBack’:
+list.c:75:9: error: unused variable ‘n’ [-Werror=unused-variable]
+   75 |   Node* n = createNode(data);
+      |         ^
+cc1: all warnings being treated as errors
+Compilation failed
+5645f9e
