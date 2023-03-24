@@ -2,3 +2,27 @@ Fri 24 Mar 2023 11:36:16 AM UTC:
  tests:  0|6
 total_score: 0/70
 7d565db
+Fri 24 Mar 2023 11:36:37 AM UTC: 
+ list.c | 19 ++++++++++++++-----
+ 1 file changed, 14 insertions(+), 5 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘createList’:
+list.c:33:16: error: ‘list’ undeclared (first use in this function); did you mean ‘List’?
+   33 |   List* lista=(list*) malloc(sizeof(list));
+      |                ^~~~
+      |                List
+list.c:33:16: note: each undeclared identifier is reported only once for each function it appears in
+list.c:33:21: error: expected expression before ‘)’ token
+   33 |   List* lista=(list*) malloc(sizeof(list));
+      |                     ^
+list.c: In function ‘firstList’:
+list.c:42:7: error: ‘lista’ undeclared (first use in this function); did you mean ‘list’?
+   42 |   if(!lista->head) return NULL;
+      |       ^~~~~
+      |       list
+list.c:45:1: error: control reaches end of non-void function [-Werror=return-type]
+   45 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+f57fbc6
