@@ -121,3 +121,31 @@ Fri 24 Mar 2023 11:45:51 AM UTC:
  tests:  2|5
 total_score: 15/70
 9db8f1b
+Fri 24 Mar 2023 11:52:08 AM UTC: 
+ list.c | 17 ++++++++++++-----
+ 1 file changed, 12 insertions(+), 5 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘nextList’:
+list.c:49:3: error: ‘current’ undeclared (first use in this function); did you mean ‘popCurrent’?
+   49 |   current->next;
+      |   ^~~~~~~
+      |   popCurrent
+list.c:49:3: note: each undeclared identifier is reported only once for each function it appears in
+list.c: In function ‘pushBack’:
+list.c:75:9: error: unused variable ‘n’ [-Werror=unused-variable]
+   75 |   Node* n = createNode(data);
+      |         ^
+list.c: In function ‘popFront’:
+list.c:86:9: error: ‘current’ undeclared (first use in this function); did you mean ‘popCurrent’?
+   86 |   while(current->next)
+      |         ^~~~~~~
+      |         popCurrent
+list.c:88:30: error: expected ‘;’ before ‘}’ token
+   88 |       current = current->next
+      |                              ^
+      |                              ;
+   89 |     }
+      |     ~                         
+cc1: all warnings being treated as errors
+Compilation failed
+21c3e34
