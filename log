@@ -280,3 +280,14 @@ list.c:73:35: note: previous definition of ‘data’ with type ‘void *’
       |                            ~~~~~~~^~~~
 Compilation failed
 31542aa
+Fri 24 Mar 2023 11:55:54 AM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘pushBack’:
+list.c:75:9: error: unused variable ‘n’ [-Werror=unused-variable]
+   75 |   Node* n = createNode(data);
+      |         ^
+cc1: all warnings being treated as errors
+Compilation failed
+503776b
