@@ -26,3 +26,24 @@ list.c:45:1: error: control reaches end of non-void function [-Werror=return-typ
 cc1: all warnings being treated as errors
 Compilation failed
 f57fbc6
+Fri 24 Mar 2023 11:36:54 AM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘createList’:
+list.c:33:37: error: ‘list’ undeclared (first use in this function); did you mean ‘List’?
+   33 |   List* lista=(List*) malloc(sizeof(list));
+      |                                     ^~~~
+      |                                     List
+list.c:33:37: note: each undeclared identifier is reported only once for each function it appears in
+list.c: In function ‘firstList’:
+list.c:42:7: error: ‘lista’ undeclared (first use in this function); did you mean ‘list’?
+   42 |   if(!lista->head) return NULL;
+      |       ^~~~~
+      |       list
+list.c:45:1: error: control reaches end of non-void function [-Werror=return-type]
+   45 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+8cdac34
