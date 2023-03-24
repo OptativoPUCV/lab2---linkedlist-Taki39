@@ -83,7 +83,7 @@ void pushCurrent(List * list, void * data) {
 void * popFront(List * list) 
 {
   list->current = list->head;
-  while(current->next)
+  while(list->current->next)
     {
       current = current->next
     }

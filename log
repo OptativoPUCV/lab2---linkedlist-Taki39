@@ -176,3 +176,30 @@ list.c:88:30: error: expected ‘;’ before ‘}’ token
 cc1: all warnings being treated as errors
 Compilation failed
 8b3d2f9
+Fri 24 Mar 2023 11:52:49 AM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘nextList’:
+list.c:49:16: error: statement with no effect [-Werror=unused-value]
+   49 |   list->current->next;
+      |   ~~~~~~~~~~~~~^~~~~~
+list.c: In function ‘pushBack’:
+list.c:75:9: error: unused variable ‘n’ [-Werror=unused-variable]
+   75 |   Node* n = createNode(data);
+      |         ^
+list.c: In function ‘popFront’:
+list.c:88:7: error: ‘current’ undeclared (first use in this function); did you mean ‘popCurrent’?
+   88 |       current = current->next
+      |       ^~~~~~~
+      |       popCurrent
+list.c:88:7: note: each undeclared identifier is reported only once for each function it appears in
+list.c:88:30: error: expected ‘;’ before ‘}’ token
+   88 |       current = current->next
+      |                              ^
+      |                              ;
+   89 |     }
+      |     ~                         
+cc1: all warnings being treated as errors
+Compilation failed
+b9ad9d4
