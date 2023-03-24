@@ -58,8 +58,8 @@ void * nextList(List * list)
 
 void * lastList(List * list) 
 {
-  list->current = list->head;
-  return NULL;
+  list->current = list->tail;
+  return list->current;
 }
 
 void * prevList(List * list) {
