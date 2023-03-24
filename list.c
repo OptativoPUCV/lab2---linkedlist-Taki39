@@ -50,8 +50,10 @@ void * nextList(List * list)
   if (list->head == NULL) return NULL;
   //si el sgte a mi current no existe retorna null
   if (list->current->next == NULL) return NULL;
+  //si la lista tiene datos, y el current no es el tail
+  list->current = list->current->next;
   
-  return NULL;
+  return list->current->data;
 }
 
 void * lastList(List * list) {
