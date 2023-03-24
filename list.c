@@ -92,7 +92,7 @@ void pushBack(List * list, void * data)
   else
   {
     Node* puntero = list->head;
-    wile(puntero->next) {
+    while(puntero->next) {
       puntero = puntero->next;
       }
     puntero->next = n;
