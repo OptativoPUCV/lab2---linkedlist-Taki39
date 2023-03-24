@@ -237,3 +237,33 @@ list.c:75:9: error: unused variable ‘n’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 5645f9e
+Fri 24 Mar 2023 11:55:38 AM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘pushBack’:
+list.c:75:9: error: ‘list’ redeclared as different kind of symbol
+   75 |   Node* list = createNode(data);
+      |         ^~~~
+list.c:73:22: note: previous definition of ‘list’ with type ‘List *’ {aka ‘struct List *’}
+   73 | void pushBack(List * list, void * data)
+      |               ~~~~~~~^~~~
+list.c:76:7: error: ‘Node’ has no member named ‘current’
+   76 |   list->current = list->tail;
+      |       ^~
+list.c:76:23: error: ‘Node’ has no member named ‘tail’
+   76 |   list->current = list->tail;
+      |                       ^~
+list.c:77:15: error: passing argument 1 of ‘pushCurrent’ from incompatible pointer type [-Werror=incompatible-pointer-types]
+   77 |   pushCurrent(list,data);
+      |               ^~~~
+      |               |
+      |               Node *
+In file included from list.c:4,
+                 from test.c:5:
+list.h:20:25: note: expected ‘List *’ {aka ‘struct List *’} but argument is of type ‘Node *’
+   20 | void pushCurrent(List * list, void * data);
+      |                  ~~~~~~~^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+bbab6ec
