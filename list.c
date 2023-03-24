@@ -46,6 +46,10 @@ void * firstList(List * list)
 
 void * nextList(List * list) 
 {
+  //si no tiene nodos retorna null
+  if (list->head == NULL) return NULL;
+  //si el sgte a mi current no existe retorna null
+  if (list->current->next == NULL) return NULL;
   
   return NULL;
 }
