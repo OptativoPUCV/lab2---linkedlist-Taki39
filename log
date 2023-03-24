@@ -354,3 +354,18 @@ Fri 24 Mar 2023 12:13:02 PM UTC:
  tests:  9|3
 total_score: 35/70
 729c29a
+Fri 24 Mar 2023 12:26:15 PM UTC: 
+ list.c | 19 ++++++++++++++++++-
+ 1 file changed, 18 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘pushBack’:
+list.c:95:5: error: implicit declaration of function ‘wile’ [-Werror=implicit-function-declaration]
+   95 |     wile(puntero->next) {
+      |     ^~~~
+list.c:95:24: error: expected ‘;’ before ‘{’ token
+   95 |     wile(puntero->next) {
+      |                        ^~
+      |                        ;
+cc1: all warnings being treated as errors
+Compilation failed
+0c3d222
