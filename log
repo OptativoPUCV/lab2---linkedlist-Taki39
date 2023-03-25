@@ -704,3 +704,15 @@ Sat 25 Mar 2023 03:42:00 PM UTC:
  1 file changed, 2 insertions(+), 2 deletions(-)
  tests:  0|0
 ba6c658
+Sat 25 Mar 2023 03:44:40 PM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:119:22: error: ‘current’ undeclared (first use in this function); did you mean ‘popCurrent’?
+  119 |   while(aux->next != current)
+      |                      ^~~~~~~
+      |                      popCurrent
+list.c:119:22: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+f2ab5ee
