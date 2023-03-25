@@ -115,23 +115,32 @@ void * popBack(List * list) {
 
 void * popCurrent(List * list) 
 {
+  Node* aux = list->head
+  while(aux->next!=current)
+    {
+      aux = aux->next
+    }
+  aux->next = list->current->next;
+  free(list->current);
+  list->current = list->head;
+
+  /*
   Node* sgte = list->current->next;
   Node* anterior = list->current->prev;
 
   if (list->current == list->head)
   {
     list->head = list->current->next;
-    DestruirNodo(list->current);
   }
   else
   {
     
     list->current = anterior;
+    free()
     list->current->next = sgte;
-    DestruirNodo(list->current);
   }
   
-  
+  */
   
   return NULL;
 }

@@ -671,3 +671,13 @@ Sat 25 Mar 2023 03:37:22 PM UTC:
  tests:  9|3
 total_score: 35/70
 1f17fe9
+Sat 25 Mar 2023 03:41:36 PM UTC: 
+ list.c | 15 ++++++++++++---
+ 1 file changed, 12 insertions(+), 3 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:119:3: error: expected ‘,’ or ‘;’ before ‘while’
+  119 |   while(aux->next!=current)
+      |   ^~~~~
+Compilation failed
+8ee852b
