@@ -626,3 +626,13 @@ list.c:136:5: error: expected ‘,’ or ‘;’ before ‘puntero’
       |     ^~~~~~~
 Compilation failed
 e117b41
+Sat 25 Mar 2023 03:10:32 PM UTC: 
+ list.c | 7 +++++--
+ 1 file changed, 5 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:139:5: error: expected ‘,’ or ‘;’ before ‘puntero’
+  139 |     puntero->next = eliminado->next;
+      |     ^~~~~~~
+Compilation failed
+d9f93df

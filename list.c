@@ -115,14 +115,17 @@ void * popBack(List * list) {
 
 void * popCurrent(List * list) 
 {
+  /*
   if (list->head)
   {
+    
     if (list->current == list->head)
     {
       popFront(list);
     }
-  }
-  else
+    
+  }*/
+  //else
   {
     {
     Node* puntero = list->head;
