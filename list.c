@@ -94,11 +94,25 @@ void pushBack(List * list, void * data)
 
 void pushCurrent(List * list, void * data) 
 {
-  //si el current es un nodo intermedio, guardar un nodo next current y uno nuevo
-  //conectar el next del nuevo nodo al next current
-  //cuando el current y el tail son iguales, se conecta el nuevo al   
+  Node* nodo = createNode(data);
+  if (list->head == NULL)
+    list->head = nodo;
   
-  
+  if (list->head)
+  {
+    Node* puntero = list->current->prev;
+    nodo->next = puntero->next;
+    puntero->next = nodo;
+  }
+     
+    
+    
+
+      
+  else
+  {
+    pushFront(list,data);
+  }
 }
 
 void DestruirNodo(Node* nodo)
