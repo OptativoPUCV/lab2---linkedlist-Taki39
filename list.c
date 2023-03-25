@@ -100,8 +100,6 @@ void pushCurrent(List * list, void * data)
 
     n->next = list->current->next;
     nextCurrent->data = n->next;
-
-    return nextCurrent->data;
   }
   
 }
