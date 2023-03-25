@@ -130,13 +130,10 @@ void * popCurrent(List * list)
     list->tail->next = NULL;
     free(aux);
   }
-    
+
   else
   {
-    Node* nodo = list->current;
-    Node* anterior = list->current->prev;
-    anterior->next = nodo->next;
-    free(nodo);
+    
   }
   
   return NULL;
