@@ -681,3 +681,21 @@ list.c:119:3: error: expected ‘,’ or ‘;’ before ‘while’
       |   ^~~~~
 Compilation failed
 8ee852b
+Sat 25 Mar 2023 03:41:47 PM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:119:20: error: ‘current’ undeclared (first use in this function); did you mean ‘popCurrent’?
+  119 |   while(aux->next!=current)
+      |                    ^~~~~~~
+      |                    popCurrent
+list.c:119:20: note: each undeclared identifier is reported only once for each function it appears in
+list.c:121:22: error: expected ‘;’ before ‘}’ token
+  121 |       aux = aux->next
+      |                      ^
+      |                      ;
+  122 |     }
+      |     ~                 
+Compilation failed
+1027300
