@@ -92,16 +92,16 @@ void pushCurrent(List * list, void * data)
 {
   //si el current es un nodo intermedio, guardar un nodo next current y uno nuevo
   //conectar el next del nuevo nodo al next current
-  //cuando el current y el tail son iguales, se conecta el nuevo al 
+  //cuando el current y el tail son iguales, se conecta el nuevo al   
+  if (list->head != list->current && list->tail != list->current)
+  {
+    Node* n = createNode(data);
+    Node* nextCurrent = createNode(data);
 
-  Node* n = createNode(data);
-  if (list->head == NULL)
-  {
-    list->head = n;
-  }
-  else
-  {
     n->next = list->current->next;
+    next->current = n->next;
+
+    return next->current;
   }
   
 }

@@ -444,3 +444,24 @@ Sat 25 Mar 2023 12:59:47 AM UTC:
  tests:  9|3
 total_score: 35/70
 41778d2
+Sat 25 Mar 2023 02:20:55 AM UTC: 
+ list.c | 14 +++++++-------
+ 1 file changed, 7 insertions(+), 7 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘pushCurrent’:
+list.c:102:5: error: ‘next’ undeclared (first use in this function)
+  102 |     next->current = n->next;
+      |     ^~~~
+list.c:102:5: note: each undeclared identifier is reported only once for each function it appears in
+list.c:104:12: error: ‘return’ with a value, in function returning void [-Werror=return-type]
+  104 |     return next->current;
+      |            ^~~~
+list.c:91:6: note: declared here
+   91 | void pushCurrent(List * list, void * data)
+      |      ^~~~~~~~~~~
+list.c:99:11: error: unused variable ‘nextCurrent’ [-Werror=unused-variable]
+   99 |     Node* nextCurrent = createNode(data);
+      |           ^~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+cb24c9d
