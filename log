@@ -465,3 +465,17 @@ list.c:99:11: error: unused variable ‘nextCurrent’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 cb24c9d
+Sat 25 Mar 2023 02:21:32 AM UTC: 
+ list.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘pushCurrent’:
+list.c:104:23: error: ‘return’ with a value, in function returning void [-Werror=return-type]
+  104 |     return nextCurrent->data;
+      |            ~~~~~~~~~~~^~~~~~
+list.c:91:6: note: declared here
+   91 | void pushCurrent(List * list, void * data)
+      |      ^~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+2618042
