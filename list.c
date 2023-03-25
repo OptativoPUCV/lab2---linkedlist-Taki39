@@ -121,14 +121,7 @@ void * popCurrent(List * list)
     list->head = list->current->next;
     free(aux);
   }
-  else
-  {
-    
-    list->current = anterior;
-    list->current->next = sgte;
-  }
   
-  */
   
   return NULL;
 }
