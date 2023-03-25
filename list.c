@@ -93,16 +93,13 @@ void pushCurrent(List * list, void * data)
   //si el current es un nodo intermedio, guardar un nodo next current y uno nuevo
   //conectar el next del nuevo nodo al next current
   //cuando el current y el tail son iguales, se conecta el nuevo al   
-  if (list->head != list->current && list->tail != list->current)
-  {
-    Node* n = createNode(data);
-    Node* nextCurrent = createNode(n);
-
-    n->next = list->current->next;
-    nextCurrent->data = n->next;
-    
-  }
   
+  
+}
+
+void DestruirNodo(Nodo* nodo)
+{
+  free(nodo);
 }
 
 void * popFront(List * list) 
@@ -116,8 +113,28 @@ void * popBack(List * list) {
     return popCurrent(list);
 }
 
-void * popCurrent(List * list) {
-    return NULL;
+void * popCurrent(List * list) 
+{
+  if (list->head)
+  {
+    if (list->current == list->head)
+    {
+      popFront(list);
+    }
+  }
+  {
+    Nodo* puntero = list->head;
+    int posicion=0;
+    while(posicion < list->current->prev)
+      {
+        puntero = puntero->next;
+        posicion++;
+      }
+    Nodo* eliminado = puntero->next
+    puntero->next = eliminado->next;
+    DestruirNodo(eliminado);
+  }
+  return NULL;
 }
 
 void cleanList(List * list) {
