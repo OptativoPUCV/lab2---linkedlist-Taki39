@@ -97,7 +97,7 @@ void pushCurrent(List * list, void * data)
   
 }
 
-void DestruirNodo(Nodo* nodo)
+void DestruirNodo(Node* nodo)
 {
   free(nodo);
 }

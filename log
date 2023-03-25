@@ -588,3 +588,17 @@ list.c:137:5: error: implicit declaration of function ‘DestruirNodo’ [-Werro
 cc1: all warnings being treated as errors
 Compilation failed
 bb750ad
+Sat 25 Mar 2023 02:35:27 AM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:130:20: error: comparison between pointer and integer [-Werror]
+  130 |     while(posicion < list->current->prev)
+      |                    ^
+list.c:136:5: error: expected ‘,’ or ‘;’ before ‘puntero’
+  136 |     puntero->next = eliminado->next;
+      |     ^~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+0c506f4
