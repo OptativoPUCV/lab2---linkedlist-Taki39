@@ -126,6 +126,7 @@ void * popCurrent(List * list)
   {
     {
     Node* puntero = list->head;
+    //revisar el como recorro la lista
     int posicion=0;
     while(posicion < list->current->prev)
       {
