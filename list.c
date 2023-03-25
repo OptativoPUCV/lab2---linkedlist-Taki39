@@ -139,6 +139,7 @@ void * popCurrent(List * list)
       Node* eliminado = list->head;
       list->head = list->head->next;
       DestruirNodo(eliminado);
+      list->head->prev = NULL;
     }
     else
     {
