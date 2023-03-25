@@ -96,10 +96,11 @@ void pushCurrent(List * list, void * data)
   if (list->head != list->current && list->tail != list->current)
   {
     Node* n = createNode(data);
-    Node* nextCurrent = createNode(data);
+    Node* nextCurrent = createNode(n);
 
     n->next = list->current->next;
     nextCurrent->data = n->next;
+    
   }
   
 }
