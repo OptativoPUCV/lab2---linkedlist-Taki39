@@ -130,11 +130,6 @@ void * popCurrent(List * list)
     list->tail->next = NULL;
     free(aux);
   }
-
-  else
-  {
-    
-  }
   
   return NULL;
 }
