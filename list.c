@@ -114,11 +114,6 @@ void pushCurrent(List * list, void * data)
   }
 }
 
-void DestruirNodo(Node* nodo)
-{
-  free(nodo);
-}
-
 void * popFront(List * list) 
 {
   list->current = list->head;
@@ -147,7 +142,7 @@ void * popCurrent(List * list)
       Node* eliminado = list->current;
 
       puntero->next = eliminado->next;
-      DestruirNodo(eliminado);
+      free(eliminado);
     }
   } 
   return NULL;
