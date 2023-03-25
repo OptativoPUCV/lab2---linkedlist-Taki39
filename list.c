@@ -116,11 +116,20 @@ void * popBack(List * list) {
 void * popCurrent(List * list) 
 {
   Node* sgte = list->current->next;
+  Node* anterior = list->current->prev;
 
   if (list->current == list->head)
   {
     list->head = list->current->next;
   }
+  else
+  {
+    
+    list->current = anterior;
+    list->current->next = sgte;
+  }
+  
+  
   
   return NULL;
 }

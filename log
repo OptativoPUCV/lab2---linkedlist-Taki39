@@ -647,3 +647,9 @@ list.c:118:9: error: unused variable ‘sgte’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 08b2021
+Sat 25 Mar 2023 03:36:55 PM UTC: 
+ list.c | 9 +++++++++
+ 1 file changed, 9 insertions(+)
+ tests:  9|3
+total_score: 35/70
+1b7d243
