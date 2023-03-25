@@ -122,7 +122,9 @@ void * popCurrent(List * list)
       popFront(list);
     }
   }
+  else
   {
+    {
     Nodo* puntero = list->head;
     int posicion=0;
     while(posicion < list->current->prev)
@@ -134,6 +136,8 @@ void * popCurrent(List * list)
     puntero->next = eliminado->next;
     DestruirNodo(eliminado);
   }
+  }
+  
   return NULL;
 }
 

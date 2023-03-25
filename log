@@ -529,3 +529,41 @@ list.c:135:5: error: implicit declaration of function ‘DestruirNodo’ [-Werro
 cc1: all warnings being treated as errors
 Compilation failed
 0b26534
+Sat 25 Mar 2023 02:34:56 AM UTC: 
+ list.c | 4 ++++
+ 1 file changed, 4 insertions(+)
+In file included from test.c:5:
+list.c:100:19: error: unknown type name ‘Nodo’; did you mean ‘Node’?
+  100 | void DestruirNodo(Nodo* nodo)
+      |                   ^~~~
+      |                   Node
+list.c: In function ‘popCurrent’:
+list.c:128:5: error: unknown type name ‘Nodo’; did you mean ‘Node’?
+  128 |     Nodo* puntero = list->head;
+      |     ^~~~
+      |     Node
+list.c:128:21: error: initialization of ‘int *’ from incompatible pointer type ‘Node *’ [-Werror=incompatible-pointer-types]
+  128 |     Nodo* puntero = list->head;
+      |                     ^~~~
+list.c:130:20: error: comparison between pointer and integer [-Werror]
+  130 |     while(posicion < list->current->prev)
+      |                    ^
+list.c:132:26: error: request for member ‘next’ in something not a structure or union
+  132 |         puntero = puntero->next;
+      |                          ^~
+list.c:135:5: error: unknown type name ‘Nodo’; did you mean ‘Node’?
+  135 |     Nodo* eliminado = puntero->next
+      |     ^~~~
+      |     Node
+list.c:135:30: error: request for member ‘next’ in something not a structure or union
+  135 |     Nodo* eliminado = puntero->next
+      |                              ^~
+list.c:136:5: error: expected ‘,’ or ‘;’ before ‘puntero’
+  136 |     puntero->next = eliminado->next;
+      |     ^~~~~~~
+list.c:137:5: error: implicit declaration of function ‘DestruirNodo’ [-Werror=implicit-function-declaration]
+  137 |     DestruirNodo(eliminado);
+      |     ^~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+6679574
