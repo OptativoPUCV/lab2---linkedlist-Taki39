@@ -80,6 +80,10 @@ void pushFront(List * list, void * data)
   }
   list->head = n;
   n->prev = NULL;
+
+  if(list->tail == NULL)
+    list->tail == list->head;
+  
 }
 
 void pushBack(List * list, void * data) 
@@ -133,8 +137,6 @@ void * popCurrent(List * list)
       free(aux);
     }
   }
-  
-  
   return NULL;
 }
 
