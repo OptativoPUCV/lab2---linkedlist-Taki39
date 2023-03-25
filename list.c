@@ -137,9 +137,10 @@ void * popCurrent(List * list)
     if (list->head == list->current)
     {
       Node* eliminado = list->head;
-      list->head = list->head->next;
+      list->head = eliminado->next;
       DestruirNodo(eliminado);
     }
+      
     else
     {
       Node* puntero = list->current->prev;
