@@ -95,13 +95,14 @@ void pushCurrent(List * list, void * data)
   //cuando el current y el tail son iguales, se conecta el nuevo al 
 
   Node* n = createNode(data);
-  n->next = list->current;
-  if (list->current)
+  if (list->head == NULL)
   {
-    list->current->next = n;
+    lista->head = n;
   }
-  list->current = n;
-  
+  else
+  {
+    n->next = list->next
+  }
   
 }
 

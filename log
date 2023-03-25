@@ -405,3 +405,24 @@ Sat 25 Mar 2023 12:56:06 AM UTC:
  tests:  9|3
 total_score: 35/70
 6521f91
+Sat 25 Mar 2023 12:59:24 AM UTC: 
+ list.c | 11 ++++++-----
+ 1 file changed, 6 insertions(+), 5 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘pushCurrent’:
+list.c:100:5: error: ‘lista’ undeclared (first use in this function); did you mean ‘list’?
+  100 |     lista->head = n;
+      |     ^~~~~
+      |     list
+list.c:100:5: note: each undeclared identifier is reported only once for each function it appears in
+list.c:104:19: error: ‘List’ {aka ‘struct List’} has no member named ‘next’
+  104 |     n->next = list->next
+      |                   ^~
+list.c:104:25: error: expected ‘;’ before ‘}’ token
+  104 |     n->next = list->next
+      |                         ^
+      |                         ;
+  105 |   }
+      |   ~                      
+Compilation failed
+4922fd7
