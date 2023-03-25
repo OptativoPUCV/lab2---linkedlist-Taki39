@@ -136,9 +136,9 @@ void * popCurrent(List * list)
   {
     if (list->current == list->head)
     {
-      Node* eliminado = list->head;
+      Node* aux = list->head;
       list->head = list->head->next;
-      DestruirNodo(eliminado);
+      DestruirNodo(aux);
     }
     else
     {
