@@ -148,11 +148,8 @@ void * popCurrent(List * list)
       puntero->next = eliminado->next;
       DestruirNodo(eliminado);
     }
-  }
-    
-    
-  
-    
+  } 
+  return NULL;
 }
 
 void cleanList(List * list) {
