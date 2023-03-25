@@ -84,20 +84,6 @@ void pushFront(List * list, void * data)
 
 void pushBack(List * list, void * data) 
 {
-  Node* n = createNode(data);
-  if(list->head == NULL)
-  {
-    list->head = n;
-  }
-  else
-  {
-    Node* puntero = list->head;
-    while(puntero->next) {
-      puntero = puntero->next;
-      }
-    puntero->next = n;
-  }
-  
   list->current = list->tail;
   pushCurrent(list,data);
 }
@@ -107,6 +93,16 @@ void pushCurrent(List * list, void * data)
   //si el current es un nodo intermedio, guardar un nodo next current y uno nuevo
   //conectar el next del nuevo nodo al next current
   //cuando el current y el tail son iguales, se conecta el nuevo al 
+
+  Node* n = createNode(data);
+  n->next = list->current;
+  if (list->current)
+  {
+    list->current->next = n;
+  }
+  list->current = n;
+  n->prev = NULL;
+  
 }
 
 void * popFront(List * list) 
