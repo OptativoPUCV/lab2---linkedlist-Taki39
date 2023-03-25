@@ -82,7 +82,7 @@ void pushFront(List * list, void * data)
   n->prev = NULL;
 
   if(list->tail == NULL)
-    list->tail == list->head;
+    list->tail = list->head;
   
 }
 
