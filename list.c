@@ -126,7 +126,7 @@ void * popCurrent(List * list)
   {
     
     list->current = anterior;
-    list->current->next = sgte;
+    list->current->next = sgte;DestruirNodo(list->current);
   }
   
   
