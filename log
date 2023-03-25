@@ -438,3 +438,9 @@ list.c:100:5: error: ‘lista’ undeclared (first use in this function); did yo
 list.c:100:5: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 1250696
+Sat 25 Mar 2023 12:59:47 AM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  9|3
+total_score: 35/70
+41778d2

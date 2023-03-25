@@ -97,7 +97,7 @@ void pushCurrent(List * list, void * data)
   Node* n = createNode(data);
   if (list->head == NULL)
   {
-    lista->head = n;
+    list->head = n;
   }
   else
   {
