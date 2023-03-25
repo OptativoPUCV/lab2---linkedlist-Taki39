@@ -127,11 +127,10 @@ void * popCurrent(List * list)
     {
     Node* puntero = list->head;
     //revisar el como recorro la lista
-    int posicion=0;
-    while(posicion < list->current->prev)
+    while(list->head < list->current->prev)
       {
         puntero = puntero->next;
-        posicion++;
+        list->head = list->head->next;
       }
     Node* eliminado = puntero->next
     puntero->next = eliminado->next;
