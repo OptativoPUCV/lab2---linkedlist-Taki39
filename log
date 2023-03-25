@@ -731,3 +731,35 @@ Sat 25 Mar 2023 03:48:13 PM UTC:
  1 file changed, 4 insertions(+), 1 deletion(-)
  tests:  0|0
 46ff912
+Sat 25 Mar 2023 04:03:58 PM UTC: 
+ list.c | 13 +------------
+ 1 file changed, 1 insertion(+), 12 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:127:21: error: ‘anterior’ undeclared (first use in this function)
+  127 |     list->current = anterior;
+      |                     ^~~~~~~~
+list.c:127:21: note: each undeclared identifier is reported only once for each function it appears in
+list.c:128:5: error: too few arguments to function ‘free’
+  128 |     free()
+      |     ^~~~
+In file included from test.c:2:
+/nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163-dev/include/stdlib.h:555:13: note: declared here
+  555 | extern void free (void *__ptr) __THROW;
+      |             ^~~~
+In file included from test.c:5:
+list.c:128:11: error: expected ‘;’ before ‘list’
+  128 |     free()
+      |           ^
+      |           ;
+  129 |     list->current->next = sgte;
+      |     ~~~~   
+list.c:132:4: error: expected expression before ‘/’ token
+  132 |   */
+      |    ^
+list.c:135:1: error: control reaches end of non-void function [-Werror=return-type]
+  135 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+0cabe7e
