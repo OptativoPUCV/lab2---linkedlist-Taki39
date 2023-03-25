@@ -567,3 +567,24 @@ list.c:137:5: error: implicit declaration of function ‘DestruirNodo’ [-Werro
 cc1: all warnings being treated as errors
 Compilation failed
 6679574
+Sat 25 Mar 2023 02:35:11 AM UTC: 
+ list.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+list.c:100:19: error: unknown type name ‘Nodo’; did you mean ‘Node’?
+  100 | void DestruirNodo(Nodo* nodo)
+      |                   ^~~~
+      |                   Node
+list.c: In function ‘popCurrent’:
+list.c:130:20: error: comparison between pointer and integer [-Werror]
+  130 |     while(posicion < list->current->prev)
+      |                    ^
+list.c:136:5: error: expected ‘,’ or ‘;’ before ‘puntero’
+  136 |     puntero->next = eliminado->next;
+      |     ^~~~~~~
+list.c:137:5: error: implicit declaration of function ‘DestruirNodo’ [-Werror=implicit-function-declaration]
+  137 |     DestruirNodo(eliminado);
+      |     ^~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+bb750ad

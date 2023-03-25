@@ -125,14 +125,14 @@ void * popCurrent(List * list)
   else
   {
     {
-    Nodo* puntero = list->head;
+    Node* puntero = list->head;
     int posicion=0;
     while(posicion < list->current->prev)
       {
         puntero = puntero->next;
         posicion++;
       }
-    Nodo* eliminado = puntero->next
+    Node* eliminado = puntero->next
     puntero->next = eliminado->next;
     DestruirNodo(eliminado);
   }
