@@ -102,10 +102,11 @@ void pushCurrent(List * list, void * data)
   
   if (list->head)
   {
-    Node* puntero = list->current;
+    Node* aux = list->current;
+    list->tail->prev = aux;
     
     nodo->next = list->current;
-    puntero->next = nodo;
+    aux->next = nodo;
   }
   else
   {
