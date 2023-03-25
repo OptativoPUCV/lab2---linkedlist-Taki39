@@ -636,3 +636,14 @@ list.c:139:5: error: expected ‘,’ or ‘;’ before ‘puntero’
       |     ^~~~~~~
 Compilation failed
 d9f93df
+Sat 25 Mar 2023 03:31:13 PM UTC: 
+ list.c | 23 ++---------------------
+ 1 file changed, 2 insertions(+), 21 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:118:9: error: unused variable ‘sgte’ [-Werror=unused-variable]
+  118 |   Node* sgte = list->current->next;
+      |         ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+08b2021
