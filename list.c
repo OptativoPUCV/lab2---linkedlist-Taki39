@@ -125,7 +125,6 @@ void * popCurrent(List * list)
   {
     
     list->current = anterior;
-    free()
     list->current->next = sgte;
   }
   
