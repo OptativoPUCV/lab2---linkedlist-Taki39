@@ -100,7 +100,8 @@ void pushCurrent(List * list, void * data)
   
   if (list->head)
   {
-    Node* puntero = list->current->prev;
+    Node* puntero = list->current;
+    
     nodo->next = list->current;
     puntero->next = nodo;
   }
